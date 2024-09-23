@@ -1,0 +1,18 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 25vh;
+}
+
+.password-icon {
+  background-color: inherit;
+  border: none;
+}
+
+h1 {
+  text-align: center;
+}

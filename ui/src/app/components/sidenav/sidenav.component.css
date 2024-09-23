@@ -1,0 +1,15 @@
+.sidenav-container {
+  max-width: 250px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+nav {
+  height: 100%;
+}
+.sidenav-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.8rem;
+}
