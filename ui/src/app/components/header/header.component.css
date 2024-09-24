@@ -1,5 +1,22 @@
-.header{
-    position: sticky;
-    top: 0;
-    padding: 1rem 1.5rem;
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.login-items {
+  display: flex;
+  gap: 1rem;
+}
+li {
+  list-style: none;
 }

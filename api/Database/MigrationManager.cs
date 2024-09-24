@@ -23,17 +23,9 @@ namespace api.Database
                     throw;
                 }
 
-                try
-                {
-                    var roleManager = services.GetRequiredService<IRoleService>();
+                var roleManager = services.GetRequiredService<IRoleService>();
 
-                    await SeedDataManager.SeedRoles(roleManager);
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                await SeedDataManager.SeedRoles(roleManager);
 
             }
         }
