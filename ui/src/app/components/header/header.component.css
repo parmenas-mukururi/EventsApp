@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--background-color);
 }
 .nav-items {
   display: flex;
@@ -16,7 +17,27 @@
 .login-items {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 li {
   list-style: none;
+}
+
+.login {
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+.sign-up {
+  color: var(--black);
+  padding: 0.8rem;
+}
+.logo-wrapper span {
+  color: var(--primary-color);
+}
+
+.logo-wrapper {
+  font-weight: 600;
+  font-size: larger;
 }

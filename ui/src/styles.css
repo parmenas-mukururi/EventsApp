@@ -1,4 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+:root {
+  --primary-color: #7848f4;
+  --secondary-color: #ff5c81;
+  --light-blue: #27a5ee;
+  --text-color: #131315;
+  --background-color: #f8f8fa;
+  --navy-blue: #10107b;
+  --grey: #687c94;
+  --white: #FFFFFF;
+}
+
+.mat-raised-button.mat-primary{
+    color: var(--white);
+    background-color: var(--primary-color);
+}
