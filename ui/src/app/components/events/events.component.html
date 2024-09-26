@@ -1,0 +1,15 @@
+<section class="image-section">
+  <img src="/images/unsplash_F2KRf_QfCqw.png" alt="event-banner" />
+</section>
+<section class="upcoming-events">
+  <h1>Upcoming <span>Events</span></h1>
+</section>
+<section class="events-section">
+  <mat-card *ngFor="let event of data">
+    <img mat-card-image [src]="event.image" [alt]="event.title" />
+    <mat-card-title>{{ event.title }}</mat-card-title>
+    <mat-card-content>{{ event.date }}</mat-card-content>
+    <mat-card-content>{{ event.time }}</mat-card-content>
+    <mat-card-content>{{ event.venue }}</mat-card-content>
+  </mat-card>
+</section>

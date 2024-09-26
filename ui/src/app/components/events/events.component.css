@@ -1,0 +1,32 @@
+.events-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 0 1.5rem;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: left;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+.upcoming-events {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.upcoming-events span {
+  color: var(--primary-color);
+}
+.upcoming-events h1 {
+  font-size: 2rem;
+}

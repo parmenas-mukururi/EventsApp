@@ -1,0 +1,51 @@
+export const data = [
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+  {
+    image: '/images/image3.png',
+    title: 'Event Title',
+    venue: 'Online Event',
+    date: 'Saturday, September 25',
+    time: '1400hrs',
+  },
+];
