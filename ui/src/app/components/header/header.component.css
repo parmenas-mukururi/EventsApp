@@ -19,6 +19,9 @@
   gap: 1rem;
   align-items: center;
 }
+.login-items span {
+  cursor: pointer;
+}
 li {
   list-style: none;
 }
@@ -28,10 +31,18 @@ li {
   background-color: var(--primary-color);
   padding: 0.8rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
 }
 .sign-up {
   color: var(--black);
   padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
 }
 .logo-wrapper span {
   color: var(--primary-color);
@@ -40,4 +51,17 @@ li {
 .logo-wrapper {
   font-weight: 600;
   font-size: larger;
+}
+
+
+
+.hello {
+  color: var(--primary-color);
+}
+
+.logout{
+  padding: 0.8rem 1.2rem;
+  background-color: var(--primary-color);
+  border-radius: .5rem;
+  color: var(--white);
 }

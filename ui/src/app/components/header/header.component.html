@@ -1,16 +1,18 @@
-<nav class="header">
+<header class="header">
   <div class="logo-wrapper">Event <span>Hive</span></div>
-  <!-- <div>
-    <ul class="nav-items">
-      <li>Home</li>
-      <li>Home</li>
-      <li>Home</li>
-      <li>Home</li>
-      <li>Home</li>
-    </ul>
-  </div> -->
+
   <div class="login-items">
-    <span class="login">Login</span>
-    <span class="sign-up">Sign Up</span>
+    <ng-container *ngIf="user; else loggedOut" >
+      <span
+        >Hello,
+        <span class="hello">{{ user.name }} {{ user.LastName }}</span></span
+      >
+      <span class="logout" (click)="logout()">Logout</span>
+    </ng-container>
+
+    <ng-template #loggedOut>
+      <span class="login" (click)="navigateToLoginPage()">Login</span>
+      <span class="sign-up">Sign Up</span>
+    </ng-template>
   </div>
-</nav>
+</header>
