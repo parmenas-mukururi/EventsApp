@@ -53,15 +53,13 @@ li {
   font-size: larger;
 }
 
-
-
 .hello {
   color: var(--primary-color);
 }
 
-.logout{
+.logout {
   padding: 0.8rem 1.2rem;
   background-color: var(--primary-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: var(--white);
 }

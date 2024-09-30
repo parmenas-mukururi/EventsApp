@@ -1,7 +1,6 @@
 ﻿using api.DTOs.Requests;
 using api.Helpers;
 using api.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers

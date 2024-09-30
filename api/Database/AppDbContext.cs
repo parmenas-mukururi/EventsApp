@@ -14,6 +14,8 @@ namespace api.Database
         public DbSet<UserEntity> Users { get; set; }
         public DbSet<RoleEntity> Roles { get; set; }
         public DbSet<UserRolesEntity> UserRoles { get; set; }
+        public DbSet<EventEntity> Events { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +23,7 @@ namespace api.Database
             modelBuilder.ApplyConfiguration(new UserEntityConfig());
             modelBuilder.ApplyConfiguration(new RoleEntityConfig());
             modelBuilder.ApplyConfiguration(new UserEntityConfig());
+            modelBuilder.ApplyConfiguration(new EventEntityConfig());   
         }
     }
 }
