@@ -4,6 +4,7 @@ using api.DTOs.Requests;
 using api.DTOs.Responses;
 using api.Helpers;
 using api.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace api.Services
 {
@@ -50,5 +51,56 @@ namespace api.Services
                 };
             }
         }
+
+        public async Task<EditEventResponseDTO> EditEvent(EditEventRequestDTO editEventRequestDTO)
+        {
+            try
+            {
+                var eventEntity = await this.GetEventById(editEventRequestDTO.EventId);
+
+                if (eventEntity == null)
+                {
+                    return new EditEventResponseDTO()
+                    {
+                        Success = false,
+                        Message = "Event not found",
+                    };
+                }
+
+                eventEntity.Title = editEventRequestDTO.Title;
+                eventEntity.Description = editEventRequestDTO.Description;
+                eventEntity.Date = editEventRequestDTO.Date;
+                eventEntity.Price = editEventRequestDTO.Price;
+                eventEntity.Time = editEventRequestDTO.Time;
+                eventEntity.Venue = editEventRequestDTO.Venue;
+
+                _context.Events.Update(eventEntity);
+                await _context.SaveChangesAsync();
+
+                return new EditEventResponseDTO()
+                {
+                    Success = true,
+                    Message = "Event updated successfully"
+                };
+            }
+            catch (Exception ex)
+            {
+                List<string> errorMessages = ExceptionHelper.GetErrorMessages(ex);
+
+                return new EditEventResponseDTO()
+                {
+                    Errors = errorMessages,
+                    Message = "Event failed to edit. Please try again later",
+                    Success = false
+                };
+            }
+        }
+
+        public async Task<EventEntity> GetEventById(Guid id)
+        {
+            return await _context.Events.FirstOrDefaultAsync(e => e.EventId == id);
+        }
+
     }
 }
+

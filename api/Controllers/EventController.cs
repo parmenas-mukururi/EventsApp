@@ -30,5 +30,21 @@ namespace api.Controllers
             }
             return BadRequest(results);
         }
+
+        [HttpPut("editEvent")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> EditEvent(EditEventRequestDTO request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return ApiModelErrorResponseHelper.CreateBadRequestResponse(ModelState);
+            }
+            var results = await _eventService.EditEvent(request);
+            if (results.Success)
+            {
+                return Ok(results);
+            }
+            return BadRequest(results);
+        }
     }
 }
