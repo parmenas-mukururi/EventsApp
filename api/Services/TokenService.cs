@@ -22,7 +22,7 @@ namespace api.Services
         {
             List<string> roles = await _roleService.GetRoles(user.UserId);
 
-            var roleClaims = roles.Select(role => new Claim("roles", role)).ToList();
+            var roleClaims = roles.Select(role => new Claim(ClaimTypes.Role, role)).ToList();
 
             var claims = new[]
             {

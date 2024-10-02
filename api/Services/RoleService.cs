@@ -62,6 +62,16 @@ namespace api.Services
                     throw new ArgumentNullException(nameof(role));
                 }
 
+                var userRoleExists = await _dbContext.UserRoles.AnyAsync(ur => ur.UserId == user.UserId && ur.RoleId == role.RoleId);
+                if (userRoleExists)
+                {
+                    return new GetRolesResponseDTO
+                    {
+                        Success = false,
+                        Message = "User already has this role assigned."
+                    };
+                }
+
                 _dbContext.UserRoles.Add(new UserRolesEntity
                 {
                     UserId = user.UserId,
@@ -83,7 +93,7 @@ namespace api.Services
                 return new GetRolesResponseDTO()
                 {
                     Errors = errorMessages,
-                    Message = "Role registration failed. Please try again later",
+                    Message = "Role assignment failed. Please try again later",
                     Success = false
                 };
             }

@@ -12,8 +12,8 @@ using api.Database;
 namespace api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240930113525_AddEventTable")]
-    partial class AddEventTable
+    [Migration("20241001113550_SeedAdmin")]
+    partial class SeedAdmin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -24,8 +24,10 @@ namespace api.Database
                 }
 
                 var roleManager = services.GetRequiredService<IRoleService>();
+                var userManager = services.GetRequiredService<IAuthService>();
 
                 await SeedDataManager.SeedRoles(roleManager);
+                await SeedDataManager.SeedAdminUser(userManager, roleManager);
 
             }
         }

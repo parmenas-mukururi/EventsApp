@@ -97,7 +97,9 @@ namespace api.Services
 
                     _dbContext.Users.Add(newUser);
                     await _dbContext.SaveChangesAsync();
-                    await _roleService.AssignRoleToUser(newUser, "User");
+
+
+                    await _roleService.AssignRoleToUser(newUser, "Admin");
 
 
                     return new RegisterUserResponseDTO
